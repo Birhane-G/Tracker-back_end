@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\userController;
+use App\Http\Controllers\pageController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -20,3 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('signup', [userController::class, 'signup']);
 Route::post('signin', [userController::class, 'signin']);
+
+Route::get("/pageview", [pageController::class, "pagePerformance"]);
