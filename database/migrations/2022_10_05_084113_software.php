@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('Browser', function (Blueprint $table)
         {
-            $table->id();
+            $table->increments("id");
             $table->string("Browser_name");
             $table->string("nb_uniq_visitors");
             $table->string("nb_visits");
@@ -26,6 +26,7 @@ return new class extends Migration
             $table->string("nb_visits_convertes");
             $table->string("logo");
             $table->string("segment");
+            $table->timestamp("time");
         });
     }
 

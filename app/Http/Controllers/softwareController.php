@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
-
+use App\Models\Browser;
 class softwareController extends Controller
 {
     function Browser()
@@ -16,8 +16,9 @@ class softwareController extends Controller
         $date = "yesterday";
         $format = "json";
 
-        $Browser = Http::get("http://localhost/matomo/index.php?module=API&method=DevicesDetection.getBrowsers&idSite={$idsite}&period={$period}&date={$date}&format={$format}&token_auth={$token}&force_api_session=1");
-
-        return $Browser->json();
+        $Browser_data = Http::get("http://localhost/matomo/index.php?module=API&method=DevicesDetection.getBrowsers&idSite={$idsite}&period={$period}&date={$date}&format={$format}&token_auth={$token}&force_api_session=1");
+        // $Browser = new Browser();
+        // $Browser->Browser_name = $Browser_data->label;
+        return $Browser_data->json();
     }
 }
