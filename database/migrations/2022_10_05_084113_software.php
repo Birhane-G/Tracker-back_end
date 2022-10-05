@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('Browser', function (Blueprint $table)
+        Schema::create('browsers', function (Blueprint $table)
         {
             $table->increments("id");
             $table->string("Browser_name");
@@ -37,6 +37,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::drop("Browser");
+        Schema::drop("browsers");
     }
 };
