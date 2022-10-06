@@ -27,4 +27,9 @@ Route::post('signin', [userController::class, 'signin']);
 Route::get("/pageview", [pageController::class, "pagePerformance"]);
 
 //Software API's
-Route::get("/Browser/{id?}", [softwareController::class, "Browser"]);
+
+Route::get("/Browser", [softwareController::class, "Browser"]);
+Route::get("/operatingsystem", [softwareController::class, "operatingsystem"]);
+Route::get("/plugin", [softwareController::class, "plugin"]);
+Route::get("/engine", [softwareController::class, "engine"]);
+
