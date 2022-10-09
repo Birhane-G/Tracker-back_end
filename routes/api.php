@@ -24,7 +24,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('signup', [userController::class, 'signup']);
 Route::post('signin', [userController::class, 'signin']);
 
-Route::get("/pageview", [pageController::class, "pagePerformance"]);
+// Route::get("/pageview", [pageController::class, "pagePerformance"]);
+Route::get("/test", [pageController::class, "test"]);
 
 //Software API's
 

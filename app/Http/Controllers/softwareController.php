@@ -8,7 +8,6 @@ use App\Models\Browser;
 use App\Models\engine;
 use App\Models\plugin;
 use App\Models\operatingsystem;
-
 class softwareController extends Controller
 {
     function Browser()
