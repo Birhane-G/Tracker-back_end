@@ -13,7 +13,7 @@ class pageServiceProvider extends ServiceProvider
      */
     public function register()
     {
-       $this->app->bind('App\Tracker\src\Data\data', 'App\Tracker\src\Implements\testimplementation');
+       $this->app->bind('App\Tracker\src\Files\Test', 'App\Tracker\src\Files\TestImpl');
       
     }
 

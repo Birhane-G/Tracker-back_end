@@ -1,12 +1,6 @@
 <?php
 
 namespace App\Tracker\src\Files;
-
-use App\Tracker\src\Data\data;
-use App\Tracker\src\Files;
-use Illuminate\Support\Facades\Http;
-use App\Models\Browser;
-use  App\Tracker\src\request\RequestOptions;
 class Software extends store
 {
     private $data = [];
@@ -17,6 +11,7 @@ class Software extends store
     }
     public function Browser($argument = [])
     {
-        echo "hey";
+        $test = $this->setDatas($argument);
+        $test->data->Test($argument);
     }
 }
