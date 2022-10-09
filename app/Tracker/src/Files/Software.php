@@ -17,6 +17,6 @@ class Software extends store
     }
     public function Browser($argument = [])
     {
-        
+        echo "hey";
     }
 }

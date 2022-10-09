@@ -6,6 +6,6 @@ use App\Tracker\src\Data\data;
 class testimplementation implements data
 {
     public function getData(){
-        return "heyyyyy";
+        echo "heyyyyy";
     }
 }
