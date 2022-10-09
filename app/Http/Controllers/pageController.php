@@ -7,9 +7,11 @@ use Illuminate\Support\Facades\Http;
 use App\Tracker\src\Facades\Tracker;
 class pageController extends Controller
 {
+
    // public function pagePerformance(testinterface $test){
    //  $test->test();
    // }
+
    public function test(){
       $argument = [
          'idSite' => 1,
