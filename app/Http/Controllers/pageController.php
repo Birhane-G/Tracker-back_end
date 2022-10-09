@@ -19,7 +19,6 @@ class pageController extends Controller
          'format' => 'json'
       ];
       $test = Tracker::getSoftware()->Browser($argument);
-      
       return $test;
    }
 }

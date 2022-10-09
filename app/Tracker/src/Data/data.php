@@ -3,5 +3,5 @@
 namespace App\Tracker\src\Data;
 
 interface data{
-    public function getData($argument = []);
+    public function getData();
 }
