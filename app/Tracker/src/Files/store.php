@@ -1,15 +1,18 @@
 <?php
 
 namespace App\Tracker\src\Files;
+
 use App\Tracker\src\Files\TestInterface;
-use App\Tracker\src\Files\TestImpl;
+
 abstract class store
 {
-    protected $TestInterface;
+    protected $request;
 
+    public function __construct(TestInterface $request)
+    {
+        $this->request = $request;
+    }
     public function setDatas($argument)
     {
-        return new TestInterface();
     }
-
 }

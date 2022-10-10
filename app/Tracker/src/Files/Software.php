@@ -12,6 +12,6 @@ class Software extends store
     public function Browser($argument = [])
     {
         $test = $this->setDatas($argument);
-        $test->data->Test($argument);
+        $this->request->Test($argument);
     }
 }

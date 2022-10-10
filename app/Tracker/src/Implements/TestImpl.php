@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Tracker\src\Files;
-use App\Tracker\src\Files\Test;
+namespace App\Tracker\src\Implements;
+
+use App\Tracker\src\Files\TestInterface;
 
 class TestImpl implements TestInterface
 {
