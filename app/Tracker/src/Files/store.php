@@ -8,7 +8,7 @@ abstract class store
 {
     protected $request;
 
-    public function __construct(TestInterface $request)
+    public function __construct($argument)
     {
         $this->request = $argument;
     }
