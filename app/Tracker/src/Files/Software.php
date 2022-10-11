@@ -1,17 +1,14 @@
 <?php
 
 namespace App\Tracker\src\Files;
+use App\Tracker\src\Files\TestInterface;
 class Software extends store
 {
-    private $data = [];
-
-    public function __construct($argument)
+    public function Browser($argument)
     {
-        $this->data = $argument;
-    }
-    public function Browser($argument = [])
-    {
-        $test = $this->setDatas($argument);
-        $this->request->Test($argument);
+        // $test = $this->setDatas($argument);
+        $test = new TestInterface();
+        $test->Test($argument);
+        return $argument;
     }
 }

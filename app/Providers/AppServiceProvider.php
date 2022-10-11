@@ -15,7 +15,14 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind('Tracker', function($app) {
-            return new Tracker;
+            $argument = [
+                'idSite' => 1,
+                'period' => 'day',
+                'date' => 'today',
+                'token' => 'e06a8fd22e0ffc40705f87610d1d5cd6',
+                'format' => 'json'
+             ];
+            return new Tracker($argument);
         });
     }
 

@@ -4,5 +4,5 @@ namespace App\Tracker\src\Files;
 
 interface TestInterface
 {
-    public function Test($argument);
+    public static function Test($argument);
 }
