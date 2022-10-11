@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\userController;
 use App\Http\Controllers\softwareController;
 use App\Http\Controllers\pageController;
-
+use App\Http\Controllers\DeviceController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -33,4 +33,12 @@ Route::get("/Browser", [softwareController::class, "Browser"]);
 Route::get("/operatingsystem", [softwareController::class, "operatingsystem"]);
 Route::get("/plugin", [softwareController::class, "plugin"]);
 Route::get("/engine", [softwareController::class, "engine"]);
+
+//Device API's
+
+Route::get("/DeviceBrand", [DeviceController::class, "DeviceBrand"]);
+Route::get("/DeviceType", [DeviceController::class, "DeviceType"]);
+Route::get("/ScreenResolution", [DeviceController::class, "ScreenResolution"]);
+Route::get("/DeviceModel", [DeviceController::class, "DeviceModel"]);
+
 
