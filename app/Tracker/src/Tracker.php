@@ -6,13 +6,13 @@ use App\Tracker\src\Files\Software;
 
 class Tracker
 {
-    private $argument = [];
+    public $argument;
 
-    public function __construct($argument = [])
-    {
-        $this->result = $argument;
+    public function __construct($argument){
+
+            $this->argument = $argument;
     }
-
+ 
     public function getSoftware()
     {
         return new Software($this->argument);
