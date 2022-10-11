@@ -19,12 +19,55 @@ return new class extends Migration
             $table->string("Browser_name");
             $table->string("nb_uniq_visitors");
             $table->string("nb_visits");
-            $table->string("nb_users");
             $table->string("nb_actions");
+            $table->string("nb_users");
+            $table->string("max_actions");
             $table->string("sum_Visit_length");
             $table->string("bounce_count");
-            $table->string("nb_visits_convertes");
+            $table->string("nb_visits_converted");
             $table->string("logo");
+            $table->string("segment");
+            $table->timestamp("time");
+        });
+
+        Schema::create('operatingsystems', function (Blueprint $table)
+        {
+            $table->increments("id");
+            $table->string("os_name");
+            $table->string("nb_uniq_visitors");
+            $table->string("nb_visits");
+            $table->string("nb_actions");
+            $table->string("nb_users");
+            $table->string("max_actions");
+            $table->string("sum_Visit_length");
+            $table->string("bounce_count");
+            $table->string("nb_visits_converted");
+            $table->string("logo");
+            $table->timestamp("time");
+        });
+
+        Schema::create('plugins', function (Blueprint $table)
+        {
+            $table->increments("id");
+            $table->string("plugins_name");
+            $table->string("nb_visits");
+            $table->string("nb_visits_percentage");
+            $table->string("logo");
+            $table->timestamp("time");
+        });
+
+        Schema::create('engines', function (Blueprint $table)
+        {
+            $table->increments("id");
+            $table->string("engines_name");
+            $table->string("nb_uniq_visitors");
+            $table->string("nb_visits");
+            $table->string("nb_actions");
+            $table->string("nb_users");
+            $table->string("max_actions");
+            $table->string("sum_Visit_length");
+            $table->string("bounce_count");
+            $table->string("nb_visits_converted");
             $table->string("segment");
             $table->timestamp("time");
         });
@@ -38,5 +81,8 @@ return new class extends Migration
     public function down()
     {
         Schema::drop("browsers");
+        Schema::drop("operatingsystems");
+        Schema::drop("plugins");
+        Schema::drop("engines");
     }
 };

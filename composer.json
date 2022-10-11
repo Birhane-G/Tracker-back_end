@@ -49,6 +49,12 @@
     },
     "extra": {
         "laravel": {
+            "providers":[
+                "App\\Providers\\pageServiceProvider"
+            ],
+            "aliases":{
+                "Calculator": "Tracker\\src\\Facades\\Calculator"
+            },
             "dont-discover": []
         }
     },
