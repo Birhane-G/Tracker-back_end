@@ -14,8 +14,7 @@ abstract class store
     }
     public function setDatas($argument)
     {
-
-   echo "Hello";
+          echo "Hello";
 
     }
 }

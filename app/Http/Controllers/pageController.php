@@ -12,6 +12,7 @@ class pageController extends Controller
    public function test(){
 
       TestInterface::Test("hey");
+
       
       // $argument = [
       //    'idSite' => 1,
@@ -22,5 +23,6 @@ class pageController extends Controller
       // ];
       // $test = Tracker::getSoftware()->Browser($argument);
       // return $test;
+
  }
 }
