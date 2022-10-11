@@ -6,6 +6,7 @@ use App\Http\Controllers\userController;
 use App\Http\Controllers\softwareController;
 use App\Http\Controllers\pageController;
 use App\Http\Controllers\DeviceController;
+use App\Http\Controllers\locationController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -33,6 +34,12 @@ Route::get("/Browser", [softwareController::class, "Browser"]);
 Route::get("/operatingsystem", [softwareController::class, "operatingsystem"]);
 Route::get("/plugin", [softwareController::class, "plugin"]);
 Route::get("/engine", [softwareController::class, "engine"]);
+
+//Location API
+Route::get("/Country", [locationController::class, "Country"]);
+Route::get("/Continent", [locationController::class, "Continent"]);
+Route::get("/Region", [locationController::class, "Region"]);
+Route::get("/City", [locationController::class, "City"]);
 
 //Device API's
 

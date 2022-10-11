@@ -3,6 +3,7 @@
 namespace App\Tracker\src;
 
 use App\Tracker\src\Files\Software;
+use App\Tracker\src\Files\Location;
 
 class Tracker
 {
@@ -18,13 +19,14 @@ class Tracker
         return new Software($this->argument);
     }
 
-    public function Device(int $value)
+
+    public function getLocation()
     {
-        return "Device";
+        return new Location($this->argument);
     }
 
-    public function Location()
+    public function Device(int $value)
     {
-        return "Location";
+        
     }
 }
