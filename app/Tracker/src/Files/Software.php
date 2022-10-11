@@ -6,9 +6,7 @@ class Software extends store
 {
     public function Browser($argument)
     {
-        // $test = $this->setDatas($argument);
-        $test = new TestInterface();
-        $test->Test($argument);
-        return $argument;
+
+        $this->request->Test($argument);
     }
 }

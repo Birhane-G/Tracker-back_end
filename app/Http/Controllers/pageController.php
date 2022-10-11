@@ -9,6 +9,7 @@ use App\Tracker\src\Files\TestInterface;
 
 class pageController extends Controller
 {
+
    public function test(){
 
       TestInterface::Test("hey");
