@@ -23,12 +23,14 @@ class softwareController extends Controller
         // }
 
         $token = "e06a8fd22e0ffc40705f87610d1d5cd6";
-        $idsite = 1;
+                $tokenGk = "b55d5e3d2ab278933faea944d3a867a1";
+
+        $idsite = 2;
         $period = "day";
         $date = "today";
         $format = "json";
 
-        $Browser_data = Http::get("http://localhost/matomo/index.php?module=API&method=DevicesDetection.getBrowsers&idSite={$idsite}&period={$period}&date={$date}&format={$format}&token_auth={$token}&force_api_session=1");
+        $Browser_data = Http::get("http://localhost/matomo/index.php?module=API&method=DevicesDetection.getBrowsers&idSite={$idsite}&period={$period}&date={$date}&format={$format}&token_auth={$tokenGk}&force_api_session=1");
         $datas = json_decode($Browser_data, true);
 
         foreach ($datas as $index => $item) {
