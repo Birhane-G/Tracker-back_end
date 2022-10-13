@@ -19,6 +19,5 @@ class pageController extends Controller
       ];
       $test = Tracker::getSoftware()->Browser($argument);
       return $test;
-
  }
 }

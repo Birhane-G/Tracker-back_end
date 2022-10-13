@@ -2,21 +2,22 @@
 
 namespace App\Tracker\src\Files;
 use App\Tracker\src\Implements\TestImpl;
-class Software extends store
+
+class Location extends store
 {
-    public function Browser($argument)
+    public function Country($argument)
     {
        return TestImpl::Test($argument);
     }
-    public function Os($argument)
+    public function Continent($argument)
     {
        return TestImpl::Test($argument);
     }
-    public function plugin($argument)
+    public function Region($argument)
     {
        return TestImpl::Test($argument);
     }
-    public function engine($argument)
+    public function City($argument)
     {
        return TestImpl::Test($argument);
     }
