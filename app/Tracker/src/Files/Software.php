@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Tracker\src\Files;
-use App\Tracker\src\Files\TestInterface;
 use App\Tracker\src\Implements\TestImpl;
 class Software extends store
 {
