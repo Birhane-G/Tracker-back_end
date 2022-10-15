@@ -7,6 +7,8 @@ use App\Http\Controllers\softwareController;
 use App\Http\Controllers\pageController;
 use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\locationController;
+use App\Http\Controllers\visitorController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -27,9 +29,12 @@ Route::post('signin', [userController::class, 'signin']);
 
 // PageView API
 Route::get("/PagePerformance", [pageController::class, "PagePerformance"]);
+Route::get("/Pageview", [pageController::class, "Pageview"]);
+
+//Visitor API
+Route::get("/Visitorlog", [visitorController::class, "Visitorlog"]);
 
 //Software API's
-
 Route::get("/Browser", [softwareController::class, "Browser"]);
 Route::get("/operatingsystem", [softwareController::class, "operatingsystem"]);
 Route::get("/plugin", [softwareController::class, "plugin"]);
