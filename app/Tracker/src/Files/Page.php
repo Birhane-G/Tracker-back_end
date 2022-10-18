@@ -9,4 +9,8 @@ class Page extends store
     {
        return TestImpl::Test($argument);
     }
+    public function Pageview($argument)
+    {
+       return TestImpl::Test($argument);
+    }
 }
