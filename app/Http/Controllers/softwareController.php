@@ -12,11 +12,14 @@ class softwareController extends Controller
             'idSite' => 1,
             'period' => 'day',
             'date' => 'today',
-            'token' => 'e06a8fd22e0ffc40705f87610d1d5cd6',
+            'token' => '3e7cd2087d85ab33492ac570db70ab7c',
             'format' => 'json'
          ];
          $test = Tracker::getSoftware()->Browser($argument);
-         return $test;
+         return response()->json([
+            'status' => 200,
+            'value' => $test
+         ]);
     }
 
     function operatingsystem(){
@@ -25,11 +28,14 @@ class softwareController extends Controller
             'idSite' => 1,
             'period' => 'day',
             'date' => 'today',
-            'token' => 'e06a8fd22e0ffc40705f87610d1d5cd6',
+            'token' => '3e7cd2087d85ab33492ac570db70ab7c',
             'format' => 'json'
          ];
          $test = Tracker::getSoftware()->Os($argument);
-         return $test;
+         return response()->json([
+            'status' => 200,
+            'value' => $test
+         ]);
     }
 
     function plugin(){
@@ -38,11 +44,14 @@ class softwareController extends Controller
             'idSite' => 1,
             'period' => 'day',
             'date' => 'today',
-            'token' => 'e06a8fd22e0ffc40705f87610d1d5cd6',
+            'token' => '3e7cd2087d85ab33492ac570db70ab7c',
             'format' => 'json'
          ];
          $test = Tracker::getSoftware()->plugin($argument);
-         return $test;
+         return response()->json([
+            'status' => 200,
+            'value' => $test
+         ]);
     }
     function engine(){
         $argument = [
@@ -50,10 +59,13 @@ class softwareController extends Controller
             'idSite' => 1,
             'period' => 'day',
             'date' => 'today',
-            'token' => 'e06a8fd22e0ffc40705f87610d1d5cd6',
+            'token' => '3e7cd2087d85ab33492ac570db70ab7c',
             'format' => 'json'
          ];
          $test = Tracker::getSoftware()->engine($argument);
-         return $test;
+         return response()->json([
+            'status' => 200,
+            'value' => $test
+         ]);
     }
 }

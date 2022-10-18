@@ -14,11 +14,14 @@ class locationController extends Controller
             'idSite' => 1,
             'period' => 'day',
             'date' => 'today',
-            'token' => 'e06a8fd22e0ffc40705f87610d1d5cd6',
+            'token' => '3e7cd2087d85ab33492ac570db70ab7c',
             'format' => 'json'
          ];
          $test = Tracker::getLocation()->Country($argument);
-         return $test;
+         return response()->json([
+            'status' => 200,
+            'value' => $test
+         ]);
     }
     function Continent()
     {
@@ -27,11 +30,14 @@ class locationController extends Controller
             'idSite' => 1,
             'period' => 'day',
             'date' => 'today',
-            'token' => 'e06a8fd22e0ffc40705f87610d1d5cd6',
+            'token' => '3e7cd2087d85ab33492ac570db70ab7c',
             'format' => 'json'
          ];
          $test = Tracker::getLocation()->Continent($argument);
-         return $test;
+         return response()->json([
+            'status' => 200,
+            'value' => $test
+         ]);
     }
     function Region()
     {
@@ -40,11 +46,14 @@ class locationController extends Controller
             'idSite' => 1,
             'period' => 'day',
             'date' => 'today',
-            'token' => 'e06a8fd22e0ffc40705f87610d1d5cd6',
+            'token' => '3e7cd2087d85ab33492ac570db70ab7c',
             'format' => 'json'
          ];
          $test = Tracker::getLocation()->Region($argument);
-         return $test;
+         return response()->json([
+            'status' => 200,
+            'value' => $test
+         ]);
     }
     function City()
     {
@@ -53,10 +62,13 @@ class locationController extends Controller
             'idSite' => 1,
             'period' => 'day',
             'date' => 'today',
-            'token' => 'e06a8fd22e0ffc40705f87610d1d5cd6',
+            'token' => '3e7cd2087d85ab33492ac570db70ab7c',
             'format' => 'json'
          ];
          $test = Tracker::getLocation()->City($argument);
-         return $test;
+         return response()->json([
+            'status' => 200,
+            'value' => $test
+         ]);
     }
 }
