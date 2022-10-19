@@ -1,24 +1,24 @@
 <?php
 
 namespace App\Tracker\src\Files;
-use App\Tracker\src\Implements\TestImpl;
+use App\Tracker\src\Implements\LocationImp;
 
-class Location extends store
+class Location
 {
     public function Country($argument)
     {
-       return TestImpl::Test($argument);
+       return LocationImp::CountryData($argument);
     }
     public function Continent($argument)
     {
-       return TestImpl::Test($argument);
+       return LocationImp::CRC($argument);
     }
     public function Region($argument)
     {
-       return TestImpl::Test($argument);
+       return LocationImp::CRC($argument);
     }
     public function City($argument)
     {
-       return TestImpl::Test($argument);
+       return LocationImp::CRC($argument);
     }
 }

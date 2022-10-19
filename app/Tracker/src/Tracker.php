@@ -5,6 +5,10 @@ namespace App\Tracker\src;
 use App\Tracker\src\Files\Software;
 use App\Tracker\src\Files\Location;
 use App\Tracker\src\Files\Page;
+use App\Tracker\src\Files\Device;
+use App\Tracker\src\Files\Visitor;
+use App\Models\InterfaceTest;
+
 class Tracker
 {
     public $argument;
@@ -29,9 +33,13 @@ class Tracker
         return new Page($this->argument);
     }
 
-    public function Device(int $value)
+    public function getDevice()
     {
-        
+        return new Device($this->argument);
+    }
+    public function getVisitor()
+    {
+        return new Visitor($this->argument);
     }
     
 }

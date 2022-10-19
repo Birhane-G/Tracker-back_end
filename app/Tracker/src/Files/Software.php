@@ -1,23 +1,24 @@
 <?php
 
 namespace App\Tracker\src\Files;
-use App\Tracker\src\Implements\TestImpl;
-class Software extends store
+use App\Tracker\src\Implements\SoftwareImp;
+
+class Software
 {
     public function Browser($argument)
     {
-       return TestImpl::Test($argument);
+       return SoftwareImp::Data($argument);
     }
     public function Os($argument)
     {
-       return TestImpl::Test($argument);
+       return SoftwareImp::Data($argument);
     }
     public function plugin($argument)
     {
-       return TestImpl::Test($argument);
+       return SoftwareImp::Data($argument);
     }
     public function engine($argument)
     {
-       return TestImpl::Test($argument);
+       return SoftwareImp::Data($argument);
     }
 }
