@@ -32,6 +32,8 @@ Route::get("/PageView", [pageController::class, "PageView"]);
 
 // Visitor API
 Route::get("/ChannelType", [visitorController::class, "ChannelType"]);
+Route::get("/Live", [visitorController::class, "Live"]);
+Route::get("/VisitorLog", [visitorController::class, "VisitorLog"]);
 
 //Software API's
 Route::get("/Browser", [softwareController::class, "Browser"]);

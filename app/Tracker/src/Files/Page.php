@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Tracker\src\Files;
-use App\Tracker\src\Implements\TestImpl;
-use App\Models\InterfaceTest;
+use App\Tracker\src\Implements\PageImp;
+
 
 class Page
 {
@@ -13,10 +13,10 @@ class Page
       }
       public function PagePerformance($argument)
       {
-         return TestImpl::Test($argument);
+         return PageImp::Data($argument);
       }
       public function PageView($argument)
       {
-         return TestImpl::Test($argument);
+         return PageImp::PageView($argument);
       }
 }

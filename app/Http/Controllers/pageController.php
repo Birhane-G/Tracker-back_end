@@ -8,9 +8,20 @@ use App\Models\InterfaceTest;
 
 class pageController extends Controller
 {
-   public function PagePerformance(InterfaceTest $val){
-   
-    $val->Page(); 
+   public function PagePerformance(){
+      $argument = [
+         'method' => 'PagePerformance.get',
+         'idSite' => 1,
+         'period' => 'range',
+         'date' => '2022-10-18,2022-10-20',
+         'token' => '3e7cd2087d85ab33492ac570db70ab7c',
+         'format' => 'json'
+      ];
+      $test = Tracker::getPages()->PagePerformance($argument);
+      return response()->json([
+         'status' => 200,
+         'value' => $test
+      ]);
  }
    public function PageView(){
       $argument = [
@@ -26,6 +37,5 @@ class pageController extends Controller
          'status' => 200,
          'value' => $test
       ]);
-      // $data->Page();
    }
 }

@@ -7,7 +7,6 @@ use App\Tracker\src\Files\Location;
 use App\Tracker\src\Files\Page;
 use App\Tracker\src\Files\Device;
 use App\Tracker\src\Files\Visitor;
-use App\Models\InterfaceTest;
 
 class Tracker
 {
