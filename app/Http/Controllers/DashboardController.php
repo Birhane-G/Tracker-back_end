@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Tracker\src\Facades\Tracker;
 use Illuminate\Http\Request;
+use App\Tracker\src\Facades\Tracker;
 
-class visitorController extends Controller
+class DashboardController extends Controller
 {
-    public function ChannelType(){
+    public function PopularPage(){
         $argument = [
             'method' => 'Referrers.getReferrerType',
             'idSite' => 1,
@@ -22,35 +22,50 @@ class visitorController extends Controller
             'value' => $test
          ]);
        }
-       public function Live(){
+       public function TotalVisitors(){
         $argument = [
-            'method' => 'Live.getCounters',
-            'idSite' => 1,
-            'lastMinutes' => 30,
-            'date' => 'today',
-            'token' => '3e7cd2087d85ab33492ac570db70ab7c',
-            'format' => 'json'
-        ];
-         $test = Tracker::getVisitor()->Live($argument);
-         return response()->json([
-            'status' => 200,
-            'value' => $test
-         ]);
-       }
-       public function VisitorLog(){
-        $argument = [
-            'method' => 'Live.getLastVisitsDetails',
+            'method' => 'Referrers.getReferrerType',
             'idSite' => 1,
             'period' => 'day',
             'date' => 'today',
             'token' => '3e7cd2087d85ab33492ac570db70ab7c',
             'format' => 'json'
         ];
-         $test = Tracker::getVisitor()->Log($argument);
+         $test = Tracker::getDashboard()->Visitors($argument);
          return response()->json([
             'status' => 200,
             'value' => $test
          ]);
        }
+       public function TotalActions(){
+        $argument = [
+            'method' => 'Referrers.getReferrerType',
+            'idSite' => 1,
+            'period' => 'day',
+            'date' => 'today',
+            'token' => '3e7cd2087d85ab33492ac570db70ab7c',
+            'format' => 'json'
+        ];
+         $test = Tracker::getVisitor()->ChannelType($argument);
+         return response()->json([
+            'status' => 200,
+            'value' => $test
+         ]);
+       }
+       public function VisitorOverDay(){
+        $argument = [
+            'method' => 'VisitTime.getByDayOfWeek',
+            'idSite' => 1,
+            'period' => 'range',
+            'date' => '2022-10-18,2022-10-20',
+            'token' => '3e7cd2087d85ab33492ac570db70ab7c',
+            'format' => 'json'
+        ];
+         $test = Tracker::getDashboard()->VisitorOverDay($argument);
+         return response()->json([
+            'status' => 200,
+            'value' => $test
+         ]);
+       }
+       
 }
-

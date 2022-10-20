@@ -8,6 +8,7 @@ use App\Http\Controllers\pageController;
 use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\locationController;
 use App\Http\Controllers\visitorController;
+use App\Http\Controllers\DashboardController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -53,4 +54,6 @@ Route::get("/DeviceType", [DeviceController::class, "DeviceType"]);
 Route::get("/ScreenResolution", [DeviceController::class, "ScreenResolution"]);
 Route::get("/DeviceModel", [DeviceController::class, "DeviceModel"]);
 
-
+//Dashboard APIs
+Route::get("/TotalVisitors", [DashboardController::class, "TotalVisitors"]);
+Route::get("/VisitorOverDay", [DashboardController::class, "VisitorOverDay"]);

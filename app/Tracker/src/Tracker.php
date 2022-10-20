@@ -7,6 +7,7 @@ use App\Tracker\src\Files\Location;
 use App\Tracker\src\Files\Page;
 use App\Tracker\src\Files\Device;
 use App\Tracker\src\Files\Visitor;
+use App\Tracker\src\Files\Dashboard;
 
 class Tracker
 {
@@ -39,6 +40,10 @@ class Tracker
     public function getVisitor()
     {
         return new Visitor($this->argument);
+    }
+    public function getDashboard()
+    {
+        return new Dashboard($this->argument);
     }
     
 }
