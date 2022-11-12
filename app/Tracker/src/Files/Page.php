@@ -13,6 +13,7 @@ class Page
       }
       public function PagePerformance($argument)
       {
+            // $value = $this->request->Data($argument);
          return PageImp::Data($argument);
       }
       public function PageView($argument)

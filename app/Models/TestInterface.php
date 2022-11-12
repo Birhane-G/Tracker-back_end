@@ -4,5 +4,5 @@ namespace App\Models;
 
 interface TestInterface
 {
-    public static function Test($argument);
+    public static function Data($argument);
 }

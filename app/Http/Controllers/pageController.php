@@ -13,7 +13,7 @@ class pageController extends Controller
          'method' => 'PagePerformance.get',
          'idSite' => 1,
          'period' => 'range',
-         'date' => '2022-10-18,2022-10-20',
+         'date' => '2022-10-18,2022-10-23',
          'token' => '3e7cd2087d85ab33492ac570db70ab7c',
          'format' => 'json'
       ];
@@ -27,8 +27,8 @@ class pageController extends Controller
       $argument = [
          'method' => 'Actions.get',
          'idSite' => 1,
-         'period' => 'range',
-         'date' => '2022-10-16,2022-10-19',
+         'period' => 'day',
+         'date' => '2022-10-18,2022-10-20',
          'token' => '3e7cd2087d85ab33492ac570db70ab7c',
          'format' => 'json'
       ];

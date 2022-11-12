@@ -13,8 +13,8 @@ class pageServiceProvider extends ServiceProvider
      */
     public function register()
     {
-       $this->app->bind('App\Models\TestInterface', 'App\Tracker\src\Implements\TestImpl');
-       $this->app->bind('App\Models\InterfaceTest', 'App\Models\Implement\PageInterfaceImp');
+       $this->app->bind('App\Models\TestInterface', 'App\Tracker\src\Implements\SoftwareImp');
+    //    $this->app->bind('App\Models\InterfaceTest', 'App\Models\Implement\PageInterfaceImp');
     }
 
     /**
