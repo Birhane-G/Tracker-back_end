@@ -37,21 +37,21 @@ class DashboardController extends Controller
             'value' => $test
          ]);
        }
-       public function TotalActions(){
-        $argument = [
-            'method' => 'Referrers.getReferrerType',
-            'idSite' => 1,
-            'period' => 'day',
-            'date' => 'today',
-            'token' => 'a8e9c9a5540f44cf0eb1756b9feacfb0',
-            'format' => 'json'
-        ];
-         $test = Tracker::getDashboard()->Visitors($argument);
-         return response()->json([
-            'status' => 200,
-            'value' => $test
-         ]);
-       }
+    //    public function TotalActions(){
+    //     $argument = [
+    //         'method' => 'Referrers.getReferrerType',
+    //         'idSite' => 1,
+    //         'period' => 'day',
+    //         'date' => 'today',
+    //         'token' => 'a8e9c9a5540f44cf0eb1756b9feacfb0',
+    //         'format' => 'json'
+    //     ];
+    //      $test = Tracker::getDashboard()->Visitors($argument);
+    //      return response()->json([
+    //         'status' => 200,
+    //         'value' => $test
+    //      ]);
+    //    }
        public function VisitorOverDay(){
         $argument = [
             'method' => 'VisitTime.getByDayOfWeek',

@@ -1,6 +1,6 @@
 <?php
 
-// namespace App\Tracker\src\Implements;
+namespace App\Tracker\src\Implements;
 
 use Illuminate\Support\Facades\Http;
 

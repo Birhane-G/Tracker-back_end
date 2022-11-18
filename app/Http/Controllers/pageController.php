@@ -13,7 +13,7 @@ class pageController extends Controller
          'method' => 'PagePerformance.get',
          'idSite' => 1,
          'period' => 'day',
-         'date' => '2022-11-17,2022-11-18',
+         'date' => '2022-11-14,2022-11-18',
          'token' => 'a8e9c9a5540f44cf0eb1756b9feacfb0',
          'format' => 'json'
       ];
