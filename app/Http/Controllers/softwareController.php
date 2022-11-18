@@ -11,8 +11,8 @@ class softwareController extends Controller
             'method' => 'DevicesDetection.getBrowsers',
             'idSite' => 1,
             'period' => 'day',
-            'date' => 'today',
-            'token' => '3e7cd2087d85ab33492ac570db70ab7c',
+            'date' => '2022-11-17',
+            'token' => 'a8e9c9a5540f44cf0eb1756b9feacfb0',
             'format' => 'json'
          ];
          $test = Tracker::getSoftware()->Browser($argument);
@@ -27,8 +27,8 @@ class softwareController extends Controller
             'method' => 'DevicesDetection.getOsFamilies',
             'idSite' => 1,
             'period' => 'day',
-            'date' => 'today',
-            'token' => '3e7cd2087d85ab33492ac570db70ab7c',
+            'date' => '2022-11-17',
+            'token' => 'a8e9c9a5540f44cf0eb1756b9feacfb0',
             'format' => 'json'
          ];
          $test = Tracker::getSoftware()->Os($argument);
@@ -43,8 +43,8 @@ class softwareController extends Controller
             'method' => 'DevicePlugins.getPlugin',
             'idSite' => 1,
             'period' => 'day',
-            'date' => 'today',
-            'token' => '3e7cd2087d85ab33492ac570db70ab7c',
+            'date' => '2022-11-17',
+            'token' => 'a8e9c9a5540f44cf0eb1756b9feacfb0',
             'format' => 'json'
          ];
          $test = Tracker::getSoftware()->plugin($argument);
@@ -58,8 +58,8 @@ class softwareController extends Controller
             'method' => 'DevicesDetection.getBrowserEngines',
             'idSite' => 1,
             'period' => 'day',
-            'date' => 'today',
-            'token' => '3e7cd2087d85ab33492ac570db70ab7c',
+            'date' => '2022-11-17',
+            'token' => 'a8e9c9a5540f44cf0eb1756b9feacfb0',
             'format' => 'json'
          ];
          $test = Tracker::getSoftware()->engine($argument);

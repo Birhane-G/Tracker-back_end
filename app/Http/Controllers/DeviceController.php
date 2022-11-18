@@ -17,8 +17,8 @@ class DeviceController extends Controller
             'method' => 'DevicesDetection.getBrand',
             'idSite' => 1,
             'period' => 'day',
-            'date' => 'today',
-            'token' => '3e7cd2087d85ab33492ac570db70ab7c',
+            'date' => Date("Y-m-d"),
+            'token' => 'a8e9c9a5540f44cf0eb1756b9feacfb0',
             'format' => 'json'
          ];
          $test = Tracker::getDevice()->DeviceBrand($argument);
@@ -32,8 +32,8 @@ class DeviceController extends Controller
             'method' => 'DevicesDetection.getType',
             'idSite' => 1,
             'period' => 'day',
-            'date' => 'today',
-            'token' => '3e7cd2087d85ab33492ac570db70ab7c',
+            'date' => Date("Y-m-d"),
+            'token' => 'a8e9c9a5540f44cf0eb1756b9feacfb0',
             'format' => 'json'
          ];
          $test = Tracker::getDevice()->DeviceType($argument);
@@ -47,8 +47,8 @@ public function ScreenResolution(){
         'method' => 'Resolution.getResolution',
         'idSite' => 1,
         'period' => 'day',
-        'date' => 'today',
-        'token' => '3e7cd2087d85ab33492ac570db70ab7c',
+        'date' => Date("Y-m-d"),
+        'token' => 'a8e9c9a5540f44cf0eb1756b9feacfb0',
         'format' => 'json'
      ];
      $test = Tracker::getDevice()->ScreenResolution($argument);
@@ -62,8 +62,8 @@ public function DeviceModel(){
         'method' => 'DevicesDetection.getModel',
         'idSite' => 1,
         'period' => 'day',
-        'date' => 'today',
-        'token' => '3e7cd2087d85ab33492ac570db70ab7c',
+        'date' => Date("Y-m-d"),
+        'token' => 'a8e9c9a5540f44cf0eb1756b9feacfb0',
         'format' => 'json'
      ];
      $test = Tracker::getDevice()->DeviceModel($argument);

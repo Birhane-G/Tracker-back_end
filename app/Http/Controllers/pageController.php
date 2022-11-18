@@ -12,9 +12,9 @@ class pageController extends Controller
       $argument = [
          'method' => 'PagePerformance.get',
          'idSite' => 1,
-         'period' => 'range',
-         'date' => '2022-10-18,2022-10-23',
-         'token' => '3e7cd2087d85ab33492ac570db70ab7c',
+         'period' => 'day',
+         'date' => '2022-11-17,2022-11-18',
+         'token' => 'a8e9c9a5540f44cf0eb1756b9feacfb0',
          'format' => 'json'
       ];
       $test = Tracker::getPages()->PagePerformance($argument);
@@ -28,8 +28,8 @@ class pageController extends Controller
          'method' => 'Actions.get',
          'idSite' => 1,
          'period' => 'day',
-         'date' => '2022-10-18,2022-10-20',
-         'token' => '3e7cd2087d85ab33492ac570db70ab7c',
+         'date' => 'today',
+         'token' => 'a8e9c9a5540f44cf0eb1756b9feacfb0',
          'format' => 'json'
       ];
       $test = Tracker::getPages()->PageView($argument);

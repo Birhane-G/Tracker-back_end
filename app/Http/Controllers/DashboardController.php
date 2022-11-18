@@ -13,7 +13,7 @@ class DashboardController extends Controller
             'idSite' => 1,
             'period' => 'day',
             'date' => 'today',
-            'token' => '3e7cd2087d85ab33492ac570db70ab7c',
+            'token' => 'a8e9c9a5540f44cf0eb1756b9feacfb0',
             'format' => 'json'
         ];
          $test = Tracker::getVisitor()->ChannelType($argument);
@@ -24,11 +24,11 @@ class DashboardController extends Controller
        }
        public function TotalVisitors(){
         $argument = [
-            'method' => 'Referrers.getReferrerType',
+            'method' => 'Live.getCounters',
             'idSite' => 1,
-            'period' => 'day',
+            'lastMinutes' => 1000,
             'date' => 'today',
-            'token' => '3e7cd2087d85ab33492ac570db70ab7c',
+            'token' => 'a8e9c9a5540f44cf0eb1756b9feacfb0',
             'format' => 'json'
         ];
          $test = Tracker::getDashboard()->Visitors($argument);
@@ -43,10 +43,10 @@ class DashboardController extends Controller
             'idSite' => 1,
             'period' => 'day',
             'date' => 'today',
-            'token' => '3e7cd2087d85ab33492ac570db70ab7c',
+            'token' => 'a8e9c9a5540f44cf0eb1756b9feacfb0',
             'format' => 'json'
         ];
-         $test = Tracker::getVisitor()->ChannelType($argument);
+         $test = Tracker::getDashboard()->Visitors($argument);
          return response()->json([
             'status' => 200,
             'value' => $test
@@ -56,9 +56,9 @@ class DashboardController extends Controller
         $argument = [
             'method' => 'VisitTime.getByDayOfWeek',
             'idSite' => 1,
-            'period' => 'range',
-            'date' => '2022-10-18,2022-10-20',
-            'token' => '3e7cd2087d85ab33492ac570db70ab7c',
+            'period' => 'day',
+            'date' => Date("Y-m-d"),
+            'token' => 'a8e9c9a5540f44cf0eb1756b9feacfb0',
             'format' => 'json'
         ];
          $test = Tracker::getDashboard()->VisitorOverDay($argument);

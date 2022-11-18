@@ -7,14 +7,16 @@ use App\Tracker\src\Facades\Tracker;
 
 class locationController extends Controller
 {
+   // $date = ;
+
     function Country()
     {
         $argument = [
             'method' => 'UserCountry.getCountry',
             'idSite' => 1,
             'period' => 'day',
-            'date' => 'today',
-            'token' => '3e7cd2087d85ab33492ac570db70ab7c',
+            'date' => Date("Y-m-d"),
+            'token' => 'a8e9c9a5540f44cf0eb1756b9feacfb0',
             'format' => 'json'
          ];
          $test = Tracker::getLocation()->Country($argument);
@@ -29,8 +31,8 @@ class locationController extends Controller
             'method' => 'UserCountry.getContinent',
             'idSite' => 1,
             'period' => 'day',
-            'date' => 'today',
-            'token' => '3e7cd2087d85ab33492ac570db70ab7c',
+            'date' => Date("Y-m-d"),
+            'token' => 'a8e9c9a5540f44cf0eb1756b9feacfb0',
             'format' => 'json'
          ];
          $test = Tracker::getLocation()->Continent($argument);
@@ -45,8 +47,8 @@ class locationController extends Controller
             'method' => 'UserCountry.getRegion',
             'idSite' => 1,
             'period' => 'day',
-            'date' => 'today',
-            'token' => '3e7cd2087d85ab33492ac570db70ab7c',
+            'date' => Date("Y-m-d"),
+            'token' => 'a8e9c9a5540f44cf0eb1756b9feacfb0',
             'format' => 'json'
          ];
          $test = Tracker::getLocation()->Region($argument);
@@ -61,8 +63,8 @@ class locationController extends Controller
             'method' => 'UserCountry.getCity',
             'idSite' => 1,
             'period' => 'day',
-            'date' => 'today',
-            'token' => '3e7cd2087d85ab33492ac570db70ab7c',
+            'date' => Date("Y-m-d"),
+            'token' => 'a8e9c9a5540f44cf0eb1756b9feacfb0',
             'format' => 'json'
          ];
          $test = Tracker::getLocation()->City($argument);

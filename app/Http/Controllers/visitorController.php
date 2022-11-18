@@ -12,8 +12,8 @@ class visitorController extends Controller
             'method' => 'Referrers.getReferrerType',
             'idSite' => 1,
             'period' => 'day',
-            'date' => 'today',
-            'token' => '3e7cd2087d85ab33492ac570db70ab7c',
+            'date' => Date("Y-m-d"),
+            'token' => 'a8e9c9a5540f44cf0eb1756b9feacfb0',
             'format' => 'json'
         ];
          $test = Tracker::getVisitor()->ChannelType($argument);
@@ -27,8 +27,8 @@ class visitorController extends Controller
             'method' => 'Live.getCounters',
             'idSite' => 1,
             'lastMinutes' => 30,
-            'date' => 'today',
-            'token' => '3e7cd2087d85ab33492ac570db70ab7c',
+            'date' => Date("Y-m-d"),
+            'token' => 'a8e9c9a5540f44cf0eb1756b9feacfb0',
             'format' => 'json'
         ];
          $test = Tracker::getVisitor()->Live($argument);
@@ -42,8 +42,8 @@ class visitorController extends Controller
             'method' => 'Live.getLastVisitsDetails',
             'idSite' => 1,
             'period' => 'day',
-            'date' => 'today',
-            'token' => '3e7cd2087d85ab33492ac570db70ab7c',
+            'date' => Date("Y-m-d"),
+            'token' => 'a8e9c9a5540f44cf0eb1756b9feacfb0',
             'format' => 'json'
         ];
          $test = Tracker::getVisitor()->Log($argument);
