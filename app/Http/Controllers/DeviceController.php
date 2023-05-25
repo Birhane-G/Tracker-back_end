@@ -18,7 +18,7 @@ class DeviceController extends Controller
             'idSite' => 1,
             'period' => 'day',
             'date' => Date("Y-m-d"),
-            'token' => 'a8e9c9a5540f44cf0eb1756b9feacfb0',
+            'token' => 'df7e214c48d7abbda4d2fec42b857175',
             'format' => 'json'
          ];
          $test = Tracker::getDevice()->DeviceBrand($argument);

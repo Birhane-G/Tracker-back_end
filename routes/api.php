@@ -9,6 +9,7 @@ use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\locationController;
 use App\Http\Controllers\visitorController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\TestTracker;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -57,3 +58,7 @@ Route::get("/DeviceModel", [DeviceController::class, "DeviceModel"]);
 //Dashboard APIs
 Route::get("/TotalVisitors", [DashboardController::class, "TotalVisitors"]);
 Route::get("/VisitorOverDay", [DashboardController::class, "VisitorOverDay"]);
+
+// Test Tracker controller
+//Dashboard APIs
+Route::get("/testtracker", [TestTracker::class, "Test"]);

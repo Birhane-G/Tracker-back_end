@@ -9,7 +9,7 @@ class DeviceImp
 {
     public static function Data($argument)
     {
-        $Browser_data = Http::get("http://localhost/matomo/index.php?module=API&method={$argument['method']}&idSite={$argument['idSite']}&period={$argument['period']}&date={$argument['date']}&format={$argument['format']}&token_auth={$argument['token']}&force_api_session=1");
+        $Browser_data = Http::get("http://localhost:800/matomo/index.php?module=API&method={$argument['method']}&idSite={$argument['idSite']}&period={$argument['period']}&date={$argument['date']}&format={$argument['format']}&token_auth={$argument['token']}&force_api_session=1");
         $datas = json_decode($Browser_data, true);
 
         // for ($i = 0; $i < count($datas); $i++) {
